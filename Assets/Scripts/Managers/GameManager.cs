@@ -16,7 +16,7 @@ namespace GameManagerNamespace
         [SerializeField] float rollspeed;
         [SerializeField] float maxRollSpeed;
 
-        [Range(100, 1000)]
+        [Range(1, 1000)]
         [Tooltip("High Value -> Slower Shrinking \nRecommended 700")]
         [SerializeField] float shrinkFraction;
 
@@ -40,7 +40,7 @@ namespace GameManagerNamespace
         [SerializeField] Image _playPanel;
         [SerializeField] AudioClip _gameOverClip;
         [SerializeField] Transform _blender;
-        [SerializeField] CanvasRenderer _topPanel;
+        [SerializeField] public GameObject _topPanel;
         [SerializeField] GameObject _learn;
 
 
@@ -96,6 +96,7 @@ namespace GameManagerNamespace
             _rigidbody.isKinematic = true;
             SoundManager.Instance.PauseMusic();
             SoundManager.Instance.PlaySoundEffect(_gameOverClip);
+            _playerTransform.DOScale(Vector3.one * 17, 0.1f);
         }
 
         public void Finished()
@@ -113,11 +114,11 @@ namespace GameManagerNamespace
                 _rigidbody.AddForce(rollspeed * Vector3.forward, ForceMode.Acceleration);
                 _rigidbody.velocity = Vector3.ClampMagnitude(_rigidbody.velocity, maxRollSpeed);
 
-                Vector3 tempScale = _playerTransform.localScale -= shrinkAmount; ;
+                Vector3 tempScale = _playerTransform.localScale -= shrinkAmount;
                 _playerTransform.DOScale(tempScale, 0.1f);
 
             }
-            else if (_playerTransform.localScale.x < 0.1f)
+            else if (_playerTransform.localScale.x < 6f)
             {
                 Dead();
             }
@@ -177,11 +178,11 @@ namespace GameManagerNamespace
             isShrinking = true;
             _rigidbody.isKinematic = false;
 
-            if (PlayerPrefs.GetString("FirstPlay") == "Yes")
+            if (!PlayerPrefs.HasKey("FirstPlay"))
             {
                 StartCoroutine(HowToPlay());
             }
-            
+
         }
 
         IEnumerator HowToPlay()
@@ -189,7 +190,8 @@ namespace GameManagerNamespace
             _learn.SetActive(true);
             yield return new WaitForSeconds(3);
             _learn.SetActive(false);
-            
+            PlayerPrefs.SetString("FirstPlay", "Yes");
+            PlayerPrefs.Save();
         }
 
         private void Setup()
@@ -204,8 +206,7 @@ namespace GameManagerNamespace
             }
             Physics.gravity = new Vector3(0, gravityScale, 0);
             Application.targetFrameRate = 30;   //Default FrameRate for mobile
-
-            PlayerPrefs.SetString("FirstPlay", "Yes");
+            Time.timeScale = 0;
         }
 
     }

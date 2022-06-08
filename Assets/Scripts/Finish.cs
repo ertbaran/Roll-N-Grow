@@ -52,13 +52,14 @@ public class Finish : MonoBehaviour
         foreach (var fruitCount in collectedFruits)
         {
             //_juice.material.SetFloat("fillAmount", _juice.material.GetFloat("fillAmount") + 4 / CollectManager.Instance.totalFruitCount * fruitCount);
-            float fruitPercent = _juice.material.GetFloat("fillAmount") + 4 / CollectManager.Instance.totalFruitCount * fruitCount;
+            float fruitPercent = _juice.material.GetFloat("fillAmount") + 8 / CollectManager.Instance.totalFruitCount * fruitCount; // Default: 4
 
             DOTween.To(() => fill, x => fill = x, fruitPercent, 5).OnUpdate(() =>
             {
                 _juice.material.SetFloat("fillAmount", fill);
                 Debug.Log(fruitPercent);
             }).OnComplete(() => _finishPanel.transform.DOLocalMoveY(0, 0.7f).SetEase(Ease.OutBack));
+            GameManager.Instance._topPanel.SetActive(false);
         }
 
         SoundManager.Instance.PlaySoundEffect(_mixerSound);

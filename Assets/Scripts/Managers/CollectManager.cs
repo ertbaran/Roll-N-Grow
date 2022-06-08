@@ -21,7 +21,7 @@ public class CollectManager : MonoBehaviour
     [SerializeField] AudioClip[] _collectClips;
     [SerializeField] AudioClip _transitionClip;
     [SerializeField] GameObject _timeline;
-    [SerializeField] Image _oldScoreImage;
+    [SerializeField] public Image _oldScoreImage;   // Gamemanager'dan alýnabilir
     [SerializeField] Sprite _newScoreImage;
 
     MeshFilter _meshFilter;
@@ -101,8 +101,12 @@ public class CollectManager : MonoBehaviour
 
             if (other.gameObject.CompareTag("Obstacle"))
             {
-                GameManager.Instance.Dead();
                 other.gameObject.SetActive(false);
+                if (GameManager.isShrinking)
+                {
+                    GameManager.Instance.Dead();
+                }
+                
             }
 
 
