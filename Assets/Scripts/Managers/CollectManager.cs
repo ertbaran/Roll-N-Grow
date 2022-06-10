@@ -19,7 +19,7 @@ public class CollectManager : MonoBehaviour
     [SerializeField] ParticleSystem _destroyParticle;
     [SerializeField] TMP_Text _scoretext;
     [SerializeField] Transform _transform;
-    [SerializeField] AudioClip[] _collectClips;
+    [SerializeField] AudioClip[] _collectClips;         // Ses efectleri SoundManager'dan alýnabilir
     [SerializeField] AudioClip _transitionClip;
     [SerializeField] AudioClip _graterClip;
     [SerializeField] GameObject _timeline;
@@ -89,9 +89,9 @@ public class CollectManager : MonoBehaviour
             if (other.gameObject.CompareTag("TransitionArea"))
             {
                 SoundManager.Instance.PlaySoundEffect(_transitionClip);
-                ParticleSystem transitionParticle = Instantiate(Finish.Instance._finishParticles, _transform.position, Quaternion.identity);
+                //ParticleSystem transitionParticle = Instantiate(Finish.Instance._finishParticles, _transform.position, Quaternion.identity);
                 GameManager.Instance.currentFruitID++;
-                transitionParticle.Play();
+                Finish.Instance._finishParticles.Play();
                 _oldScoreImage.sprite = _newScoreImage;
                 _meshFilter.mesh = GameManager.Instance.fruitTypes[GameManager.Instance.currentFruitID]._mesh;
                 _meshRenderer.materials = GameManager.Instance.fruitTypes[GameManager.Instance.currentFruitID]._materials;

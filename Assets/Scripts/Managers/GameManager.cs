@@ -39,7 +39,7 @@ namespace GameManagerNamespace
         [SerializeField] Image _gameOverPanel;
         [SerializeField] Image _playPanel;
         [SerializeField] AudioClip _gameOverClip;
-        [SerializeField] Transform _blender;
+        [SerializeField] Transform _mixerTransform;
         [SerializeField] public GameObject _topPanel;
         [SerializeField] GameObject _learn;
 
@@ -108,7 +108,7 @@ namespace GameManagerNamespace
         {
             gameState = GameState.Finished;
             PlayerControl.Instance.canMove = false;
-            _rigidbody.AddForce((_blender.position - _playerTransform.position) / 2, ForceMode.VelocityChange);
+            _rigidbody.AddForce((_mixerTransform.position - _playerTransform.position) / 2, ForceMode.VelocityChange);
         }
         #endregion
 
@@ -157,6 +157,7 @@ namespace GameManagerNamespace
             }
 
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            Time.timeScale = 0;
         }
 
         public void Continue()
