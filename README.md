@@ -1,3 +1,5 @@
+Bu veriler Bootcamp sürecini kapsamaktadır.
+_____________________________________________
 # Oyun ve Uygulama Akademisi | Bootcamp Projesi
 Oyun ve Uygulama Akademisi Bootcamp Unity 86. Grup Oyun Projesi
 # **Takım İsmi**
@@ -159,16 +161,6 @@ Bir önceki sprintte kullanıcıya daha keyifli ve gerçekçi bir deneyim yaşat
 - **Sprint Retrospective:**
 Bir önceki sprintlerden kalanlar ve belirlenen hedeflerin yerine getirildiği verimli bir sprint oldu.  oyun tanıtım videosu için görev dağılımı yapıldı. Ürün belgesinde oyunumuzun son haline göre değişikler yapıldı.  Önceki, sprintlerde olduğu gibi toplantı notları ve backlog puanları miroya eklendi.
 
-### **Ek Notlar:**
 
-
-####  Dışarıdan temin edilen assetler: 
-<details>
-  <summary>Liste için buraya tıklayabilirsiniz</summary>
- 
--   [Meyve toplama sesi](https://opengameart.org/content/40-cc0-water-splash-slime-sfx)
--   [Arka plan müziği](https://www.chosic.com/download-audio/25961/)
--   ...
-</details>
-
+####  [Dışarıdan temin edilen assetler](https://github.com/ertbaran/Roll-N-Grow/raw/main/Project%20Management/Sprint%203%20Documents/Akademi_proje_materyaller.docx)
 
