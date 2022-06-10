@@ -16,6 +16,7 @@ public class CollectManager : MonoBehaviour
     [Header("Designations")]
     [SerializeField] ParticleSystem _particleCollect;
     [SerializeField] ParticleSystem _graterCollect;
+    [SerializeField] ParticleSystem _destroyParticle;
     [SerializeField] TMP_Text _scoretext;
     [SerializeField] Transform _transform;
     [SerializeField] AudioClip[] _collectClips;
@@ -103,11 +104,12 @@ public class CollectManager : MonoBehaviour
             if (other.gameObject.CompareTag("Obstacle"))
             {
                 other.gameObject.SetActive(false);
+                _destroyParticle.Play();
+
                 if (GameManager.isShrinking)
                 {
                     GameManager.Instance.Dead();
                 }
-                
             }
 
 
