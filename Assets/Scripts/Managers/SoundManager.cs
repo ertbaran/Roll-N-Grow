@@ -23,6 +23,11 @@ public class SoundManager : MonoBehaviour
     {
         _effectSource.PlayOneShot(audioClip);
     }
+    public void PauseSoundEffect()
+    {
+        _effectSource.Stop();
+    }
+
     public void PlayMusic()
     {
         _musicSource.UnPause();

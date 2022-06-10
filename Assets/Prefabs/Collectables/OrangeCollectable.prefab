@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4032198200961766790}
   - component: {fileID: 5758107355126973489}
   m_Layer: 0
-  m_Name: CollectableApple
+  m_Name: CollectableOrange
   m_TagString: CollectableFruit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25,14 +25,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4032198200961766789}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0.53913826, z: 0, w: 0.84221727}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
   m_Children:
   - {fileID: 6950521875615223974}
   m_Father: {fileID: 4682439854211663904}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 65.25, z: 0}
 --- !u!95 &4032198200961766790
 Animator:
   serializedVersion: 3
@@ -121,39 +121,51 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bd03b904c5a3f8c488e4cfe113af2ae9, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.85713136
+      value: -0.7471883
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bd03b904c5a3f8c488e4cfe113af2ae9, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.36250144
+      value: -0.036668196
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bd03b904c5a3f8c488e4cfe113af2ae9, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.33704546
+      value: -0.65894896
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bd03b904c5a3f8c488e4cfe113af2ae9, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.14254461
+      value: 0.07842977
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bd03b904c5a3f8c488e4cfe113af2ae9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
+      value: -350.9
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bd03b904c5a3f8c488e4cfe113af2ae9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 82.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bd03b904c5a3f8c488e4cfe113af2ae9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: -4
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: bd03b904c5a3f8c488e4cfe113af2ae9, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: ed6a2c7f366562d40b54045267a74b89, type: 2}
+      objectReference: {fileID: 2100000, guid: f094ba6c9e243994f92a069f4f7b521a, type: 2}
+    - target: {fileID: -7511558181221131132, guid: bd03b904c5a3f8c488e4cfe113af2ae9, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6c367837642b4e145b611b0e893af225, type: 2}
+    - target: {fileID: -7511558181221131132, guid: bd03b904c5a3f8c488e4cfe113af2ae9, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: d10af6ebd7a2b094998141adcd19b7ca, type: 2}
+    - target: {fileID: -5754084199372789682, guid: bd03b904c5a3f8c488e4cfe113af2ae9, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 6723580601522748004, guid: f8ce617c901b0034995ea667aaec5834, type: 3}
     - target: {fileID: 919132149155446097, guid: bd03b904c5a3f8c488e4cfe113af2ae9, type: 3}
       propertyPath: m_Name
-      value: Elma_Yeni
+      value: Orange
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bd03b904c5a3f8c488e4cfe113af2ae9, type: 3}

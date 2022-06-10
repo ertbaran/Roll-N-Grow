@@ -1,55 +1,56 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using GameManagerNamespace;
 using UnityEngine.InputSystem;
 
-public class PlayerControl : MonoBehaviour
+namespace GameManagerNamespace
 {
-    public static PlayerControl Instance = null;
-
-    [SerializeField] float moveSpeed;
-    [SerializeField] float moveLimitX;
-
-    float currentX;
-    float moveFactor = 100;
-    public bool canMove = true;
-
-    [SerializeField] Transform _transform;
-    [SerializeField] Rigidbody _rigidbody;
-
-    Vector2 moveVal;
-
-    private void FixedUpdate()
+    public class PlayerControl : MonoBehaviour
     {
-        MoveLimit();
-    }
+        public static PlayerControl Instance = null;
 
-    void MoveLimit()
-    {
-        currentX = Mathf.Clamp(_transform.position.x, -moveLimitX, moveLimitX);
-        _transform.position = new Vector3(currentX, _transform.position.y, _transform.position.z);
-    }
+        [SerializeField] float moveSpeed;
+        [SerializeField] float moveLimitX;
 
-    public void Move(InputAction.CallbackContext value)
-    {
-        if (value.performed & GameManager.Instance.gameState == GameManager.GameState.Started && canMove)
+        float currentX;
+        float moveFactor = 100;
+        public bool canMove = true;
+
+        [SerializeField] Transform _transform;
+        [SerializeField] Rigidbody _rigidbody;
+
+        Vector2 moveVal;
+
+        private void FixedUpdate()
         {
-            moveVal = value.ReadValue<Vector2>();
-            _rigidbody.AddForce(new Vector3(moveVal.x * moveSpeed / moveFactor, 0, 0), ForceMode.Impulse);
+            MoveLimit();
         }
-    }
 
-    private void Awake()
-    {
-        if (Instance == null)
+        void MoveLimit()
         {
-            Instance = this;
+            currentX = Mathf.Clamp(_transform.position.x, -moveLimitX, moveLimitX);
+            _transform.position = new Vector3(currentX, _transform.position.y, _transform.position.z);
         }
-        else
-        {
-            Destroy(gameObject);
-        }
-    }
 
+        public void Move(InputAction.CallbackContext value)
+        {
+            if (value.performed & GameManager.Instance.gameState == GameManager.GameState.Started && canMove)
+            {
+                moveVal = value.ReadValue<Vector2>();
+                _rigidbody.AddForce(new Vector3(moveVal.x * moveSpeed / moveFactor, 0, 0), ForceMode.Impulse);
+            }
+        }
+
+        private void Awake()
+        {
+            if (Instance == null)
+            {
+                Instance = this;
+            }
+            else
+            {
+                Destroy(gameObject);
+            }
+        }
+
+    }
 }
+

@@ -91,18 +91,23 @@ namespace GameManagerNamespace
                 Paused();
                 AdManager.Instance._ad.ShowAd();
             }
+            if (_playerTransform.localScale.x <= 6f)
+            {
+                _playerTransform.DOScale(Vector3.one * 17, 0.1f);
+            }
+            
+
             gameState = GameState.Dead;
             _gameOverPanel.gameObject.SetActive(true);
             _rigidbody.isKinematic = true;
             SoundManager.Instance.PauseMusic();
             SoundManager.Instance.PlaySoundEffect(_gameOverClip);
-            _playerTransform.DOScale(Vector3.one * 17, 0.1f);
         }
 
         public void Finished()
         {
             gameState = GameState.Finished;
-
+            PlayerControl.Instance.canMove = false;
             _rigidbody.AddForce((_blender.position - _playerTransform.position) / 2, ForceMode.VelocityChange);
         }
         #endregion

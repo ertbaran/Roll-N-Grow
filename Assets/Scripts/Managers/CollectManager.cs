@@ -1,4 +1,3 @@
-using System.Collections;
 using UnityEngine;
 using DG.Tweening;
 using TMPro;
@@ -16,10 +15,12 @@ public class CollectManager : MonoBehaviour
 
     [Header("Designations")]
     [SerializeField] ParticleSystem _particleCollect;
+    [SerializeField] ParticleSystem _graterCollect;
     [SerializeField] TMP_Text _scoretext;
     [SerializeField] Transform _transform;
     [SerializeField] AudioClip[] _collectClips;
     [SerializeField] AudioClip _transitionClip;
+    [SerializeField] AudioClip _graterClip;
     [SerializeField] GameObject _timeline;
     [SerializeField] public Image _oldScoreImage;   // Gamemanager'dan alýnabilir
     [SerializeField] Sprite _newScoreImage;
@@ -110,16 +111,6 @@ public class CollectManager : MonoBehaviour
             }
 
 
-            if (other.gameObject.CompareTag("Grater"))
-            {
-                if (GameManager.isShrinking)
-                {
-                    tempShrink = GameManager.Instance.shrinkAmount;
-                    GameManager.Instance.shrinkAmount += graterShrinkVector;
-                }
-            }
-
-
             if (other.gameObject.CompareTag("Finish"))
             {
                 collectedFruits.Add(collectedFruitCount);
@@ -130,11 +121,28 @@ public class CollectManager : MonoBehaviour
     }
 
 
-    private void OnTriggerExit(Collider other)
+    private void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.CompareTag("Grater"))
+        {
+            if (GameManager.isShrinking)
+            {
+                tempShrink = GameManager.Instance.shrinkAmount;
+                GameManager.Instance.shrinkAmount += graterShrinkVector;
+                _graterCollect.Play();
+                SoundManager.Instance.PlaySoundEffect(_graterClip);
+            }
+        }
+    }
+
+
+    private void OnCollisionExit(Collision other)
     {
         if (other.gameObject.CompareTag("Grater"))
         {
             GameManager.Instance.shrinkAmount = tempShrink;
+            SoundManager.Instance.PauseSoundEffect();
+            _graterCollect.Stop();
         }
     }
 
