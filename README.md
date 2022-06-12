@@ -1,4 +1,4 @@
-Bu veriler Bootcamp sürecini kapsamaktadır.
+Bu veriler Bootcamp sürecini kapsamaktadır.<p>
 Deneyimlediğim bazı tecrübeler:
 ScriptableObject, Occlusion, Shader Graph, New Input System ile Touch Control, Unity Analytics, Mediation ile Reklam Ekleme
 _____________________________________________
