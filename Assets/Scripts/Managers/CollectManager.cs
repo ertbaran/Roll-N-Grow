@@ -46,15 +46,22 @@ public class CollectManager : MonoBehaviour
     [HideInInspector]
     public List<float> collectedFruits = new List<float>();
 
+    [ContextMenu(nameof(GetCollectableCount))]
+
+    void GetCollectableCount()
+    {
+        totalFruitCount = GameObject.FindGameObjectsWithTag("CollectableFruit").Length;
+    }
+
     void Start()
     {
         _juice = Finish.Instance._juice.material;
         _meshFilter = GetComponent<MeshFilter>();
         _meshRenderer = GetComponent<MeshRenderer>();
         graterShrinkVector = new Vector3(graterShrinkFraction / 700, graterShrinkFraction / 700, graterShrinkFraction / 700);
-
-        totalFruitCount = GameObject.FindGameObjectsWithTag("CollectableFruit").Length;
+        GetCollectableCount();
     }
+
 
     void OnTriggerEnter(Collider other)
     {

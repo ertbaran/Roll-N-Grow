@@ -36,6 +36,7 @@ namespace GameManagerNamespace
             {
                 moveVal = value.ReadValue<Vector2>();
                 _rigidbody.AddForce(new Vector3(moveVal.x * moveSpeed / moveFactor, 0, 0), ForceMode.Impulse);
+                Debug.Log(moveVal);
             }
         }
 

@@ -19171,7 +19171,7 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: 56ac0f93e475cef46a419709242052bd, type: 3}
     - target: {fileID: 7417960026724616063, guid: 73f8705930669c44ea580aaef913d46b, type: 3}
       propertyPath: totalFruitCount
-      value: 40
+      value: 102
       objectReference: {fileID: 0}
     - target: {fileID: 7417960026724616063, guid: 73f8705930669c44ea580aaef913d46b, type: 3}
       propertyPath: _audioClips.Array.size
