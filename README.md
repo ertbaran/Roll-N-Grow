@@ -1,6 +1,8 @@
-Bu veriler Bootcamp sürecini kapsamaktadır.<p>
-Deneyimlediğim bazı tecrübeler:
-ScriptableObject, Occlusion, Shader Graph, New Input System ile Touch Control, Unity Analytics, Mediation ile Reklam Ekleme
+### Scriptler başta olmak üzere, projenin 3D ve 2D tasarımları dışında, Unity tarafındaki büyük çoğunluğu tarafımca hazırlanmıştır. <p>
+Projede deneyimlediğim bazı yeni tecrübeler:
+ScriptableObject, Occlusion, Shader Graph, New Input System ile Touch Control, Unity Analytics, Unity Mediation ile Reklam Ekleme
+
+(Bu veriler Bootcamp sürecini kapsamaktadır.)
 _____________________________________________
 # Oyun ve Uygulama Akademisi | Bootcamp Projesi
 Oyun ve Uygulama Akademisi Bootcamp Unity 86. Grup Oyun Projesi
@@ -18,8 +20,8 @@ Oyun ve Uygulama Akademisi Bootcamp Unity 86. Grup Oyun Projesi
 
 - **Mina Elvan Tetik:** Product Owner
 - **Süeda Handan Dalkıran:** Scrum Master
-- **Gizem Dekeli:** Team Member/Developer
-- **Elif Yener:** Team Member/Developer
+- **Gizem Dekeli:** Team Member/3D Artist
+- **Elif Yener:** Team Member/UI/UX Designer
 - **Ertuğrul Baran:** Team Member/Developer
 
 ## Ürün İsmi
