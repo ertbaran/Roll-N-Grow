@@ -1,8 +1,14 @@
 ### Scriptler başta olmak üzere, projenin 3D ve 2D tasarımları dışında, Unity tarafındaki büyük çoğunluğu tarafımca hazırlanmıştır. <p>
 Projede deneyimlediğim bazı yeni tecrübeler:
 ScriptableObject, Occlusion, Shader Graph, New Input System ile Touch Control, Unity Analytics, Unity Mediation ile Reklam Ekleme
+<br></br>
+## Oynanış Videosu:
+<br>
+<div align="center">
+  <a href="https://www.youtube.com/watch?v=iEHU50pf-Lk"><img src="https://user-images.githubusercontent.com/35369764/193870975-4c0991ac-00de-486d-b1cf-0e39dd263b78.png" alt="Roll N Grow - Youtube Gameplay" width="700"; height: "700";></a>
+</div>
 
-(Aşağıdaki veriler Bootcamp sürecini kapsamaktadır.)
+(Aşağıdaki veriler Bootcamp sürecini kapsamaktadır.)<br>
 _____________________________________________
 # Oyun ve Uygulama Akademisi | Bootcamp Projesi
 Oyun ve Uygulama Akademisi Bootcamp Unity 86. Grup Oyun Projesi
@@ -166,5 +172,5 @@ Bir önceki sprintte kullanıcıya daha keyifli ve gerçekçi bir deneyim yaşat
 Bir önceki sprintlerden kalanlar ve belirlenen hedeflerin yerine getirildiği verimli bir sprint oldu.  oyun tanıtım videosu için görev dağılımı yapıldı. Ürün belgesinde oyunumuzun son haline göre değişikler yapıldı.  Önceki, sprintlerde olduğu gibi toplantı notları ve backlog puanları miroya eklendi.
 
 
-####  [Dışarıdan temin edilen assetler](https://github.com/ertbaran/Roll-N-Grow/raw/main/Project%20Management/Sprint%203%20Documents/Akademi_proje_materyaller.docx)
+####  [Dışarıdan temin edilen assetler](https://github.com/ertbaran/Roll-N-Grow/blob/main/Project%20Management/Sprint%203%20Documents/D%C4%B1%C5%9Far%C4%B1dan%20Temin%20Edilen%20Assetler.docx)
 
