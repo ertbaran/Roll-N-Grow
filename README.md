@@ -2,7 +2,7 @@
 Projede deneyimlediğim bazı yeni tecrübeler:
 ScriptableObject, Occlusion, Shader Graph, New Input System ile Touch Control, Unity Analytics, Unity Mediation ile Reklam Ekleme
 
-(Bu veriler Bootcamp sürecini kapsamaktadır.)
+(Aşağıdaki veriler Bootcamp sürecini kapsamaktadır.)
 _____________________________________________
 # Oyun ve Uygulama Akademisi | Bootcamp Projesi
 Oyun ve Uygulama Akademisi Bootcamp Unity 86. Grup Oyun Projesi
